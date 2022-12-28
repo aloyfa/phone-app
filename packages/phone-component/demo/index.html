@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <style>
+    body {
+      background: #fafafa;
+    }
+  </style>
+</head>
+<body>
+  <div id="demo"></div>
+
+  <script type="module">
+    import { html, render } from 'lit';
+    import '../phone-component.js';
+
+    const demo = {
+      time: '10:10',
+      applications: [
+        {
+          name: 'Mail',
+          icon:'../src/assets/icons/mail-512x512-2365225.png',
+          notification:'23'
+        },
+        {
+          name: 'Calendar',
+          icon:'../src/assets/icons/calendar-512x512-2365233.png',
+          notification:'1'
+        },
+        {
+          name: 'Reminders',
+          icon:'../src/assets/icons/reminders-512x512-2365242.png',
+          notification:0
+        },
+        {
+          name: 'Apple tv',
+          icon:'../src/assets/icons/apple-tv-512x512-1575940.png',
+          notification:'23'
+        },
+        {
+          name: 'Weather',
+          icon:'../src/assets/icons/weather-512x512-2365236.png',
+          notification:0
+        },
+        {
+          name: 'Camera',
+          icon:'../src/assets/icons/camera-512x512-2365232.png',
+          notification:0
+        },
+        {
+          name: 'Calculator',
+          icon:'../src/assets/icons/calculator-512x512-1575939.png',
+          notification:0
+        },
+        {
+          name: 'Facetime',
+          icon:'../src/assets/icons/facetime-512x512-1575950.png',
+          notification:'2'
+        },
+        {
+          name: 'Files',
+          icon:'../src/assets/icons/files-512x512-2365229.png',
+          notification:0
+        },
+        {
+          name: 'Clock',
+          icon:'../src/assets/icons/clock-512x512-2365231.png',
+          notification:0
+        },
+        {
+          name: 'Find my',
+          icon:'../src/assets/icons/find-my-512x512-1575949.png',
+          notification:0
+        },
+        {
+          name: 'News',
+          icon:'../src/assets/icons/news-512x512-2365224.png',
+          notification:0
+        },
+        {
+          name: 'Health',
+          icon:'../src/assets/icons/health-512x512-2365228.png',
+          notification:0
+        },
+      ]
+    }
+    render(
+      html`
+        <phone-component
+          .time="${demo.time}"
+          .applications="${demo.applications}">
+        </phone-component>
+      `,
+      document.querySelector('#demo')
+    );
+  </script>
+</body>
+</html>

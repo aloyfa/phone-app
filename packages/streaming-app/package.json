@@ -1,0 +1,28 @@
+{
+  "name": "@minsait/streaming-app",
+  "description": "Webcomponent streaming-app following open-wc recommendations",
+  "license": "MIT",
+  "author": "streaming-app",
+  "version": "0.0.0",
+  "main": "src/streaming-app.js",
+  "module": "src/streaming-app.js",
+  "scripts": {
+    "analyze": "cem analyze --litelement",
+    "start": "web-dev-server"
+  },
+  "dependencies": {
+    "lit": "^2.0.2",
+    "@streaming/streaming-list": "*",
+    "@streaming/streaming-login": "*",
+    "@streaming/streaming-register": "*",
+    "@streaming/streaming-movie": "*",
+    "@streaming/streaming-profile": "*",
+    "@streaming/streaming-search": "*"
+
+  },
+  "devDependencies": {
+    "@custom-elements-manifest/analyzer": "^0.4.17",
+    "@web/dev-server": "^0.1.28"
+  },
+  "customElements": "custom-elements.json"
+}
